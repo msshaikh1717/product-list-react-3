@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./index.css" />
+
+    <title>Frontend Mentor | Product list with cart</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="main-heading">Desserts</header>
+      <ul class="desserts-container-list">
+        <li class="dessert">
+          <img
+            class="dessert-img"
+            src="../public/assets/images/image-waffle-desktop.jpg"
+            alt="waffle"
+          />
+
+          <!-- ### ADD-TO-CART-DEFAULT -->
+
+          <div class="dessert-add-to-cart">
+            <img
+              class="dessert-add-to-cart-img"
+              src="../public/assets/images/icon-add-to-cart.svg"
+              alt="icon-cart"
+            />
+            <span class="dessert-add-to-cart-span">Add to Cart</span>
+          </div>
+
+          <!-- ### ADD-TO-CART-HOVER/ACTIVE -->
+
+          <!-- <div class="dessert-add-to-cart dessert-add-to-cart-active">
+            <button class="dessert-add-to-cart-active-decr">
+              <img
+                class="dessert-add-to-cart-active-decr-img"
+                src="../public/assets/images/icon-decrement-quantity.svg"
+                alt="decrement"
+              />
+            </button>
+            <span class="dessert-add-to-cart-span">23</span>
+            <button class="dessert-add-to-cart-active-incr">
+              <img
+                class="dessert-add-to-cart-active-incr-img"
+                src="../public/assets/images/icon-increment-quantity.svg"
+                alt="increment"
+              />
+            </button>
+          </div> -->
+          <label class="dessert-title">Waffle</label>
+          <p class="dessert-desc">Waffle with Berries</p>
+          <p class="dessert-price">$6.50</p>
+        </li>
+        <li class="dessert">
+          <img
+            class="dessert-img"
+            src="../public/assets/images/image-waffle-desktop.jpg"
+            alt="waffle"
+          />
+
+          <!-- ### ADD-TO-CART-HOVER/ACTIVE -->
+
+          <!-- <div class="dessert-add-to-cart">
+            <img
+              class="dessert-add-to-cart-img"
+              src="../public/assets/images/icon-add-to-cart.svg"
+              alt="icon-cart"
+            />
+            <span class="dessert-add-to-cart-span">Add to Cart</span>
+          </div> -->
+
+          <div class="dessert-add-to-cart dessert-add-to-cart-active">
+            <button class="dessert-add-to-cart-active-decr">
+              <img
+                class="dessert-add-to-cart-active-decr-img"
+                src="../public/assets/images/icon-decrement-quantity.svg"
+                alt="decrement"
+              />
+            </button>
+            <span class="dessert-add-to-cart-span">23</span>
+            <button class="dessert-add-to-cart-active-incr">
+              <img
+                class="dessert-add-to-cart-active-incr-img"
+                src="../public/assets/images/icon-increment-quantity.svg"
+                alt="increment"
+              />
+            </button>
+          </div>
+          <label class="dessert-title">Waffle</label>
+          <p class="dessert-desc">Waffle with Berries</p>
+          <p class="dessert-price">$6.50</p>
+        </li>
+        <li class="dessert">
+          <img
+            class="dessert-img"
+            src="../public/assets/images/image-waffle-desktop.jpg"
+            alt="waffle"
+          />
+
+          <!-- ### ADD-TO-CART-HOVER/ACTIVE -->
+
+          <!-- <div class="dessert-add-to-cart">
+            <img
+              class="dessert-add-to-cart-img"
+              src="../public/assets/images/icon-add-to-cart.svg"
+              alt="icon-cart"
+            />
+            <span class="dessert-add-to-cart-span">Add to Cart</span>
+          </div> -->
+
+          <div class="dessert-add-to-cart dessert-add-to-cart-active">
+            <button class="dessert-add-to-cart-active-decr">
+              <img
+                class="dessert-add-to-cart-active-decr-img"
+                src="../public/assets/images/icon-decrement-quantity.svg"
+                alt="decrement"
+              />
+            </button>
+            <span class="dessert-add-to-cart-span">23</span>
+            <button class="dessert-add-to-cart-active-incr">
+              <img
+                class="dessert-add-to-cart-active-incr-img"
+                src="../public/assets/images/icon-increment-quantity.svg"
+                alt="increment"
+              />
+            </button>
+          </div>
+          <label class="dessert-title">Waffle</label>
+          <p class="dessert-desc">Waffle with Berries</p>
+          <p class="dessert-price">$6.50</p>
+        </li>
+        <li class="dessert">
+          <img
+            class="dessert-img"
+            src="../public/assets/images/image-waffle-desktop.jpg"
+            alt="waffle"
+          />
+
+          <!-- ### ADD-TO-CART-HOVER/ACTIVE -->
+
+          <!-- <div class="dessert-add-to-cart">
+            <img
+              class="dessert-add-to-cart-img"
+              src="../public/assets/images/icon-add-to-cart.svg"
+              alt="icon-cart"
+            />
+            <span class="dessert-add-to-cart-span">Add to Cart</span>
+          </div> -->
+
+          <div class="dessert-add-to-cart dessert-add-to-cart-active">
+            <button class="dessert-add-to-cart-active-decr">
+              <img
+                class="dessert-add-to-cart-active-decr-img"
+                src="../public/assets/images/icon-decrement-quantity.svg"
+                alt="decrement"
+              />
+            </button>
+            <span class="dessert-add-to-cart-span">23</span>
+            <button class="dessert-add-to-cart-active-incr">
+              <img
+                class="dessert-add-to-cart-active-incr-img"
+                src="../public/assets/images/icon-increment-quantity.svg"
+                alt="increment"
+              />
+            </button>
+          </div>
+          <label class="dessert-title">Waffle</label>
+          <p class="dessert-desc">Waffle with Berries</p>
+          <p class="dessert-price">$6.50</p>
+        </li>
+        <li class="dessert">
+          <img
+            class="dessert-img"
+            src="../public/assets/images/image-waffle-desktop.jpg"
+            alt="waffle"
+          />
+
+          <!-- ### ADD-TO-CART-HOVER/ACTIVE -->
+
+          <!-- <div class="dessert-add-to-cart">
+            <img
+              class="dessert-add-to-cart-img"
+              src="../public/assets/images/icon-add-to-cart.svg"
+              alt="icon-cart"
+            />
+            <span class="dessert-add-to-cart-span">Add to Cart</span>
+          </div> -->
+
+          <div class="dessert-add-to-cart dessert-add-to-cart-active">
+            <button class="dessert-add-to-cart-active-decr">
+              <img
+                class="dessert-add-to-cart-active-decr-img"
+                src="../public/assets/images/icon-decrement-quantity.svg"
+                alt="decrement"
+              />
+            </button>
+            <span class="dessert-add-to-cart-span">23</span>
+            <button class="dessert-add-to-cart-active-incr">
+              <img
+                class="dessert-add-to-cart-active-incr-img"
+                src="../public/assets/images/icon-increment-quantity.svg"
+                alt="increment"
+              />
+            </button>
+          </div>
+          <label class="dessert-title">Waffle</label>
+          <p class="dessert-desc">Waffle with Berries</p>
+          <p class="dessert-price">$6.50</p>
+        </li>
+        <li class="dessert">
+          <img
+            class="dessert-img"
+            src="../public/assets/images/image-waffle-desktop.jpg"
+            alt="waffle"
+          />
+
+          <!-- ### ADD-TO-CART-HOVER/ACTIVE -->
+
+          <!-- <div class="dessert-add-to-cart">
+            <img
+              class="dessert-add-to-cart-img"
+              src="../public/assets/images/icon-add-to-cart.svg"
+              alt="icon-cart"
+            />
+            <span class="dessert-add-to-cart-span">Add to Cart</span>
+          </div> -->
+
+          <div class="dessert-add-to-cart dessert-add-to-cart-active">
+            <button class="dessert-add-to-cart-active-decr">
+              <img
+                class="dessert-add-to-cart-active-decr-img"
+                src="../public/assets/images/icon-decrement-quantity.svg"
+                alt="decrement"
+              />
+            </button>
+            <span class="dessert-add-to-cart-span">23</span>
+            <button class="dessert-add-to-cart-active-incr">
+              <img
+                class="dessert-add-to-cart-active-incr-img"
+                src="../public/assets/images/icon-increment-quantity.svg"
+                alt="increment"
+              />
+            </button>
+          </div>
+          <label class="dessert-title">Waffle</label>
+          <p class="dessert-desc">Waffle with Berries</p>
+          <p class="dessert-price">$6.50</p>
+        </li>
+        <li class="dessert">
+          <img
+            class="dessert-img"
+            src="../public/assets/images/image-waffle-desktop.jpg"
+            alt="waffle"
+          />
+
+          <!-- ### ADD-TO-CART-HOVER/ACTIVE -->
+
+          <!-- <div class="dessert-add-to-cart">
+            <img
+              class="dessert-add-to-cart-img"
+              src="../public/assets/images/icon-add-to-cart.svg"
+              alt="icon-cart"
+            />
+            <span class="dessert-add-to-cart-span">Add to Cart</span>
+          </div> -->
+
+          <div class="dessert-add-to-cart dessert-add-to-cart-active">
+            <button class="dessert-add-to-cart-active-decr">
+              <img
+                class="dessert-add-to-cart-active-decr-img"
+                src="../public/assets/images/icon-decrement-quantity.svg"
+                alt="decrement"
+              />
+            </button>
+            <span class="dessert-add-to-cart-span">23</span>
+            <button class="dessert-add-to-cart-active-incr">
+              <img
+                class="dessert-add-to-cart-active-incr-img"
+                src="../public/assets/images/icon-increment-quantity.svg"
+                alt="increment"
+              />
+            </button>
+          </div>
+          <label class="dessert-title">Waffle</label>
+          <p class="dessert-desc">Waffle with Berries</p>
+          <p class="dessert-price">$6.50</p>
+        </li>
+      </ul>
+
+      <div class="side-bar">
+        <header class="side-bar-heading">Your Cart (0)</header>
+
+        <!-- ### FOR EMPTY CART -->
+        <img
+          class="side-bar-img"
+          src="../public/assets/images/illustration-empty-cart.svg"
+          alt="empty-cart"
+        />
+        <p class="side-bar-desc">Your added items will appear here</p>
+
+        <!-- ### FOR FILLED CART -->
+
+        <!-- <ul class="cart-items-list">
+          <li class="cart-item">
+            <label class="cart-item-title">Classic Tiramisu</label>
+            <span class="cart-item-qty">1x</span>
+            <span class="cart-item-price">@$6.50</span>
+            <span class="cart-item-total-price">$13.00</span>
+            <button class="cart-item-rmv-btn">
+              <img src="../public/assets/images/icon-remove-item.svg" alt="X" />
+            </button>
+            <hr class="cart-item-hrz-line" />
+          </li>
+          <li class="cart-item">
+            <label class="cart-item-title">Classic Tiramisu</label>
+            <span class="cart-item-qty">1x</span>
+            <span class="cart-item-price">@$6.50</span>
+            <span class="cart-item-total-price">$13.00</span>
+            <button class="cart-item-rmv-btn">
+              <img src="../public/assets/images/icon-remove-item.svg" alt="X" />
+            </button>
+            <hr class="cart-item-hrz-line" />
+          </li>
+          <li class="cart-item">
+            <label class="cart-item-title">Classic Tiramisu</label>
+            <span class="cart-item-qty">1x</span>
+            <span class="cart-item-price">@$6.50</span>
+            <span class="cart-item-total-price">$13.00</span>
+            <button class="cart-item-rmv-btn">
+              <img src="../public/assets/images/icon-remove-item.svg" alt="X" />
+            </button>
+            <hr class="cart-item-hrz-line" />
+          </li>
+        </ul> -->
+
+        <!-- ### ORDER SUMMARY -->
+
+        <!-- <div class="order-summary">
+          <span class="order-summary-title">Order Total</span>
+          <span class="order-summary-total">$46.50</span>
+        </div> -->
+
+        <!-- ### CARBON-NEUTRAL -->
+
+        <!-- <div class="carbon-neutral">
+          <img
+            class="carbon-neutral-img"
+            src="../public/assets/images/icon-carbon-neutral.svg"
+            alt="carbon-neutral"
+          />
+          <span class="carbon-neutral-span"
+            >This is
+            <strong class="carbon-neutral-span-strong">carbon-neutral</strong>
+            delivery</span
+          >
+        </div>
+        <button class="confirm-order-btn">Confirm Order</button> -->
+      </div>
+
+      <!-- ### OVERLAY ORDER CONFIRMATION -->
+      <div class="o-o-c-overlay">
+        <div class="o-o-c">
+          <img
+            class="o-o-c-tick-img"
+            src="../public/assets/images/icon-order-confirmed.svg"
+            alt="order-confirmed"
+          />
+          <h1 class="o-o-c-order-confirmed-txt">Order Confirmed</h1>
+          <p class="o-o-c-hope-msg">We hope you enjoy your food</p>
+          <ul class="o-o-c-cart-items-list">
+            <li class="o-o-c-cart-item">
+              <img
+                class="o-o-c-cart-item-thumb"
+                src="../public/assets/images/image-tiramisu-thumbnail.jpg"
+                alt="Tiramisu-thumbnail"
+              />
+              <div class="o-o-c-cart-item-center-grid">
+                <label class="o-o-c-cart-item-title"
+                  >Vanilla Bean Crème Brûlée</label
+                >
+
+                <span class="o-o-c-cart-item-qty">1x</span>
+                <span class="o-o-c-cart-item-price">@$6.50</span>
+              </div>
+              <span class="o-o-c-cart-item-total-price">$13.00</span>
+              <!-- <hr class="o-o-c-cart-item-hrz-line" /> -->
+            </li>
+            <li class="o-o-c-cart-item">
+              <img
+                class="o-o-c-cart-item-thumb"
+                src="../public/assets/images/image-tiramisu-thumbnail.jpg"
+                alt="Tiramisu-thumbnail"
+              />
+              <div class="o-o-c-cart-item-center-grid">
+                <label class="o-o-c-cart-item-title">Classic Tiramisu</label>
+
+                <span class="o-o-c-cart-item-qty">1x</span>
+                <span class="o-o-c-cart-item-price">@$6.50</span>
+              </div>
+              <span class="o-o-c-cart-item-total-price">$13.00</span>
+              <!-- <hr class="o-o-c-cart-item-hrz-line" /> -->
+            </li>
+            <li class="o-o-c-cart-item">
+              <img
+                class="o-o-c-cart-item-thumb"
+                src="../public/assets/images/image-tiramisu-thumbnail.jpg"
+                alt="Tiramisu-thumbnail"
+              />
+              <div class="o-o-c-cart-item-center-grid">
+                <label class="o-o-c-cart-item-title">Classic Tiramisu</label>
+
+                <span class="o-o-c-cart-item-qty">1x</span>
+                <span class="o-o-c-cart-item-price">@$6.50</span>
+              </div>
+              <span class="o-o-c-cart-item-total-price">$13.00</span>
+            </li>
+            <!-- <div class="o-o-c-confirmed-order-summary"> -->
+            <hr class="o-o-c-cart-item-hrz-line" />
+            <span class="o-o-c-confirmed-order-summary-total">Order Total</span>
+            <span class="o-o-c-confirmed-order-summary-price">$46.50</span>
+            <!-- </div> -->
+          </ul>
+          <button class="o-o-c-new-order-btn">Start New Order</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-export default function Overlay() {
+export default function Overlay({ handleStartNewOrder, cart }) {
   return (
     <div className="o-o-c-overlay">
       <div className="o-o-c">
@@ -10,63 +10,52 @@ export default function Overlay() {
         <h1 className="o-o-c-order-confirmed-txt">Order Confirmed</h1>
         <p className="o-o-c-hope-msg">We hope you enjoy your food</p>
         <ul className="o-o-c-cart-items-list">
-          <li className="o-o-c-cart-item">
-            <img
-              className="o-o-c-cart-item-thumb"
-              src="assets/images/image-tiramisu-thumbnail.jpg"
-              alt="Tiramisu-thumbnail"
-            />
-            <div className="o-o-c-cart-item-center-grid">
-              <label className="o-o-c-cart-item-title">
-                Vanilla Bean Crème Brûlée
-              </label>
-
-              <span className="o-o-c-cart-item-qty">1x</span>
-              <span className="o-o-c-cart-item-price">@$6.50</span>
-            </div>
-            <span className="o-o-c-cart-item-total-price">$13.00</span>
-            {/* <!-- <hr className="o-o-c-cart-item-hrz-line" /> --> */}
-          </li>
-          <li className="o-o-c-cart-item">
-            <img
-              className="o-o-c-cart-item-thumb"
-              src="assets/images/image-tiramisu-thumbnail.jpg"
-              alt="Tiramisu-thumbnail"
-            />
-            <div className="o-o-c-cart-item-center-grid">
-              <label className="o-o-c-cart-item-title">Classic Tiramisu</label>
-
-              <span className="o-o-c-cart-item-qty">1x</span>
-              <span className="o-o-c-cart-item-price">@$6.50</span>
-            </div>
-            <span className="o-o-c-cart-item-total-price">$13.00</span>
-            {/* <!-- <hr className="o-o-c-cart-item-hrz-line" /> --> */}
-          </li>
-          <li className="o-o-c-cart-item">
-            <img
-              className="o-o-c-cart-item-thumb"
-              src="assets/images/image-tiramisu-thumbnail.jpg"
-              alt="Tiramisu-thumbnail"
-            />
-            <div className="o-o-c-cart-item-center-grid">
-              <label className="o-o-c-cart-item-title">Classic Tiramisu</label>
-
-              <span className="o-o-c-cart-item-qty">1x</span>
-              <span className="o-o-c-cart-item-price">@$6.50</span>
-            </div>
-            <span className="o-o-c-cart-item-total-price">$13.00</span>
-          </li>
+          {cart.map((item) => (
+            <CartItem item={item} />
+          ))}
 
           <div className="o-o-c-confirmed-order-summary">
             <hr className="o-o-c-cart-item-hrz-line" />
             <span className="o-o-c-confirmed-order-summary-total">
               Order Total
             </span>
-            <span className="o-o-c-confirmed-order-summary-price">$46.50</span>
+            <span className="o-o-c-confirmed-order-summary-price">
+              $
+              {cart
+                .reduce(
+                  (accu, curItem) => curItem.price * curItem.quantity + accu,
+                  0
+                )
+                .toFixed(2)}
+            </span>
           </div>
         </ul>
-        <button className="o-o-c-new-order-btn">Start New Order</button>
+        <button className="o-o-c-new-order-btn" onClick={handleStartNewOrder}>
+          Start New Order
+        </button>
       </div>
     </div>
+  );
+}
+
+function CartItem({ item: { name, quantity, price } }) {
+  return (
+    <li className="o-o-c-cart-item">
+      <img
+        className="o-o-c-cart-item-thumb"
+        src="assets/images/image-tiramisu-thumbnail.jpg"
+        alt="Tiramisu-thumbnail"
+      />
+      <div className="o-o-c-cart-item-center-grid">
+        <label className="o-o-c-cart-item-title">{name}</label>
+
+        <span className="o-o-c-cart-item-qty">{quantity}x</span>
+        <span className="o-o-c-cart-item-price">@${price.toFixed(2)}</span>
+      </div>
+      <span className="o-o-c-cart-item-total-price">
+        ${(quantity * price).toFixed(2)}
+      </span>
+      {/* <!-- <hr className="o-o-c-cart-item-hrz-line" /> --> */}
+    </li>
   );
 }
